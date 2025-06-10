@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar start -->
+
+    <nav class="bg-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+            src="icon/code.svg"
+            alt="Bordered avatar"
+          />
+
+          <div class="relative flex flex-col">
+            <span
+              class="bgLinear self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Revaldo Ardiyansah</span
+            >
+            <div
+              class="h-1 bg-gradient-to-r from-green-700 to-red-700 width-title"
+            ></div>
+          </div>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col gap-4 md:gap-0 p-4 md:p-0 mt-4 border rounded-lg bg-gray-200 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-center"
+            >
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-center"
+            >
+              <a
+                href="#me"
+                class="block py-2 px-3 text-gray-900 rounded bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a
+              >
+            </li>
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-center"
+            >
+              <a
+                href="#history"
+                class="block py-2 px-3 text-gray-900 rounded bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >History</a
+              >
+            </li>
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-center"
+            >
+              <a
+                href="#skills"
+                class="block py-2 px-3 text-gray-900 rounded bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Skills</a
+              >
+            </li>
+            <li
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-center"
+            >
+              <a
+                href="#contact"
+                class="block py-2 px-3 text-gray-900 rounded bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- waves -->
+    <svg
+      class="w-full md:w-auto md:hidden"
+      id="wafePath"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#e5e7eb"
+        fill-opacity="1"
+        d="M0,288L7.5,272C15,256,30,224,45,176C60,128,75,64,90,53.3C105,43,120,85,135,122.7C150,160,165,192,180,218.7C195,245,210,267,225,266.7C240,267,255,245,270,250.7C285,256,300,288,315,261.3C330,235,345,149,360,112C375,75,390,85,405,117.3C420,149,435,203,450,224C465,245,480,235,495,208C510,181,525,139,540,154.7C555,171,570,245,585,240C600,235,615,149,630,128C645,107,660,149,675,160C690,171,705,149,720,165.3C735,181,750,235,765,213.3C780,192,795,96,810,53.3C825,11,840,21,855,64C870,107,885,181,900,213.3C915,245,930,235,945,208C960,181,975,139,990,112C1005,85,1020,75,1035,58.7C1050,43,1065,21,1080,48C1095,75,1110,149,1125,197.3C1140,245,1155,267,1170,229.3C1185,192,1200,96,1215,64C1230,32,1245,64,1260,74.7C1275,85,1290,75,1305,64C1320,53,1335,43,1350,58.7C1365,75,1380,117,1395,138.7C1410,160,1425,160,1433,160L1440,160L1440,0L1432.5,0C1425,0,1410,0,1395,0C1380,0,1365,0,1350,0C1335,0,1320,0,1305,0C1290,0,1275,0,1260,0C1245,0,1230,0,1215,0C1200,0,1185,0,1170,0C1155,0,1140,0,1125,0C1110,0,1095,0,1080,0C1065,0,1050,0,1035,0C1020,0,1005,0,990,0C975,0,960,0,945,0C930,0,915,0,900,0C885,0,870,0,855,0C840,0,825,0,810,0C795,0,780,0,765,0C750,0,735,0,720,0C705,0,690,0,675,0C660,0,645,0,630,0C615,0,600,0,585,0C570,0,555,0,540,0C525,0,510,0,495,0C480,0,465,0,450,0C435,0,420,0,405,0C390,0,375,0,360,0C345,0,330,0,315,0C300,0,285,0,270,0C255,0,240,0,225,0C210,0,195,0,180,0C165,0,150,0,135,0C120,0,105,0,90,0C75,0,60,0,45,0C30,0,15,0,8,0L0,0Z"
+      ></path>
+    </svg>
+
+    <!-- navbar end -->
+
+    <div class="w-full flex flex-col items-center">
+      <!-- first content start -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+        id="me"
+        class="md:w-4/5 p-2 md:shadow-none md:mt-10 lg:flex lg:items-center"
+      >
+        <div class="w-full flex justify-center">
+          <div
+            class="w-52 h-72 relative rounded-lg shadow-lg md:w-64 lg:w-80 lg:h-96"
+          >
+            <img
+              class="profile"
+              class="absolute w-full h-full object-cover opacity-70"
+              src="img/wajah.jpeg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div class="w-full mt-8 flex flex-col items-center md:mt-20 lg:gap-4">
+          <h1
+            class="text-slate-900 text-xl text-center lg:text-4xl font-secondary"
+          >
+            Hallo<span class="lambai">🖐</span> I'am Revaldo Ardiyansah
+          </h1>
+          <span
+            id="typed"
+            class="text-center font-secondary text-base lg:text-3xl w-full h-10"
+          >
+          </span>
+          <p class="text-center">
+            <span class="console-cursor font-secondary text-sm lg:text-xl"
+              >My name is Revaldo Ardiyansah, I live in Malang, I was born on
+              19-12-2006, I really like the field of technology, especially in Cyber Security, Game, and other IT related things</span
+            >
+          </p>
+        </div>
+      </div>
+      <!-- first content end -->
+
+      <!-- keahlian start -->
+      <section class="w-full pt-10 md:w-4/5 md:shadow-none">
+        <div class="w-full">
+          <h1
+            id="skills"
+            class="text-2xl font-bold ml-2 font-secondary lg:mt-10"
+          >
+            skills
+          </h1>
+          <p class="text-center p-1 text-sm font-mono lg:text-xl">
+            <span class="console-cursor font-secondary"
+              >As a technology enthusiast, I am currently still interested in
+              the field of Cyber Security, Web Developer, and Game Developer, And I am also interested in learning new things in the field of IT.</span
+            >
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <div class="p-4 lg:w-[48%]">
+              <h1
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-anchor-placement="top-center"
+                class="text-xl font-semibold text-center font-mono"
+              >
+                Web Developer
+              </h1>
+              <ul class="w-full flex mt-4 justify-center gap-4 flex-wrap">
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-html" type="button">
+                    <img src="icon/html.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-html"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    html
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-css" type="button">
+                    <img src="icon/css.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-css"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    css
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-js" type="button">
+                    <img src="icon/sqlite.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-js"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    unity
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-ts" type="button">
+                    <img src="icon/ts.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-ts"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    typescript
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-tw" type="button">
+                    <img src="icon/tw.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-tw"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    tailwindcss
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-zs" type="button">
+                    <img src="icon/php.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-zs"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    php
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-sass" type="button">
+                    <img src="icon/laravel.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-sass"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    laravel
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-react" type="button">
+                    <img src="icon/react.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-react"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    reactjs
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="p-4 lg:w-[48%]">
+              <h1
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-anchor-placement="top-center"
+                class="text-xl font-semibold text-center font-mono"
+              >
+                Game Developer
+              </h1>
+              <ul class="w-full flex mt-4 justify-center gap-4 flex-wrap">
+                <!-- <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-node" type="button">
+                    <img src="icon/node.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-node"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    node js
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li> -->
+                <!-- <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-express" type="button">
+                    <img src="icon/express.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-express"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    express js
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li> -->
+                <!-- <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-prisma" type="button">
+                    <img src="icon/prisma.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-prisma"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    prisma
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li> -->
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-php" type="button">
+                    <img src="icon/unity.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-php"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    unity
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-laravel" type="button">
+                    <img src="icon/godot.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-laravel"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    godot
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <button data-tooltip-target="tooltip-mysql" type="button">
+                    <img src="icon/renpy.svg" alt="" />
+                  </button>
+                  <div
+                    id="tooltip-mysql"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-800 rounded-lg tracking-wider shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    renpy
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- keahlian end -->
+      <!-- project start -->
+      <section class="w-full pt-10 md:w-4/5 md:shadow-none">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-center"
+          id="skills"
+          class="text-2xl font-bold ml-2 font-secondary md:mt-10"
+        >
+          projects
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-   center"
+          class="text-sm ml-2 font-secondary lg:text-xl"
+        >
+          some of the works that I have created
+        </p>
+        <div class="w-full p-3 flex flex-wrap justify-evenly gap-4">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="w-11/12 border-2 border-dashed border-gray-300 p-1 flex flex-col overflow-hidden items-center md:w-[45%]"
+          > 
+            <img
+              src="./img/crud.png"
+              class="w-full object-cover h-[10rem] hover:scale-110 duration-300 transition-all"
+              alt=""
+            />
+            <div class="w-full my-4">
+              <h1 class="font-primary text-2xl">Simple CRUD Larvel + React</h1>
+              <p class="mt-4 font-secondary">
+                Simple CRUD Larvel + React with tailwindcss for inputing students data or other things
+              </p>
+            </div>
+            <div>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+                >react</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                >typescript</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >tailwindcss</span
+              >
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+                >larvel</span
+              >
+            </div>
+            <div class="flex gap-2 mt-7 justify-evenly w-full flex-wrap">
+              <!-- <a
+                href="https://imamuslim.vercel.app"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >visit project &raquo;</a
+              > -->
+              <a
+                href="https://github.com/aldo3241/Simple-CRUD-Laravel-React"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >source code &raquo;</a
+              >
+            </div>
+          </div>
+          <!-- <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="w-11/12 border-2 border-dashed border-gray-300 p-1 flex flex-col overflow-hidden items-center md:w-[45%]"
+          >
+            <img
+              src="./img/movie.png"
+              class="w-full object-cover h-[10rem] hover:scale-110 duration-300 transition-all"
+              alt=""
+            />
+            <div class="w-full my-4">
+              <h1 class="font-primary text-2xl">React Movie</h1>
+              <p class="mt-4 font-secondary">
+                film rating website with the feature of displaying all film, TV
+                and actor data
+              </p>
+            </div>
+            <div>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+                >react js</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                >javascript</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >tailwindcss</span
+              >
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+                >zustand</span
+              >
+            </div>
+            <div class="flex gap-2 mt-7 justify-evenly w-full flex-wrap">
+              <a
+                href="https://reacts-movie.vercel.app"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >visit project &raquo;</a
+              >
+              <a
+                href="https://github.com/hajir1/reacts-movie"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >source code &raquo;</a
+              >
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <!-- project end -->
+      
+      <!-- Competency and Certificates start -->
+      <section class="w-full pt-10 md:w-4/5 md:shadow-none">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-center"
+          id="skills"
+          class="text-2xl font-bold ml-2 font-secondary md:mt-10"
+        >
+          Competency and Certificates
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-center"
+          class="text-sm ml-2 font-secondary lg:text-xl"
+        >
+          some of the certification that I have
+        </p>
+        <div class="w-full p-3 flex flex-wrap justify-evenly gap-4">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="w-11/12 border-2 border-dashed border-gray-300 p-1 flex flex-col overflow-hidden items-center md:w-[45%]"
+          > 
+            <img
+              src="./img/kominfo.png"
+              class="w-full object-cover h-[10rem] hover:scale-110 duration-300 transition-all"
+              alt=""
+            />
+            <div class="w-full my-4">
+              <h1 class="font-primary text-2xl">Junior Cyber Security Competition 2024</h1>
+              <p class="mt-4 font-secondary">
+                Becoming A grand finalist in Junior Cyber Security Competition 2024
+              </p>
+            </div>
+          </div>
+                    <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="w-11/12 border-2 border-dashed border-gray-300 p-1 flex flex-col overflow-hidden items-center md:w-[45%]"
+          > 
+            <img
+              src="./img/google.jpeg"
+              class="w-full object-cover h-[10rem] hover:scale-110 duration-300 transition-all"
+              alt=""
+            />
+            <div class="w-full my-4">
+              <h1 class="font-primary text-2xl">Google Cyber Security</h1>
+              <p class="mt-4 font-secondary">
+                Becoming A grand finalist in Junior Cyber Security Competition 2024
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="w-11/12 border-2 border-dashed border-gray-300 p-1 flex flex-col overflow-hidden items-center md:w-[45%]"
+          >
+            <img
+              src="./img/"
+                class="w-full object-cover h-[10rem] hover:scale-110 duration-300 transition-all"
+              alt=""
+            />
+            <div class="w-full my-4">
+              <h1 class="font-primary text-2xl">1st in LKS Cyber Security Competition</h1>
+              <p class="mt-4 font-secondary">
+                Becoming A grand finalist in Junior Cyber Security Competition 2024
+              </p>
+            </div>
+            <div>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+                >react js</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                >javascript</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >tailwindcss</span
+              >
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+                >zustand</span
+              >
+            </div>
+            <div class="flex gap-2 mt-7 justify-evenly w-full flex-wrap">
+              <a
+                href="https://reacts-movie.vercel.app"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >visit project &raquo;</a
+              >
+              <a
+                href="https://github.com/hajir1/reacts-movie"
+                target="_blank"
+                class="p-1 w-2/5 rounded-md text-center my-2 font-secondary"
+                >source code &raquo;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- project end -->
+      <!-- contact start -->
+      <section class="w-full mt-10 p-3 md:w-4/5 md:shadow-none">
+        <div
+          class="w-full"
+          class="w-full pt-10 md:w-4/5 md:shadow-none"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-center"
+        >
+          <h1
+            id="contact"
+            class="text-2xl font-bold ml-2 font-secondary md:mt-10 text-center"
+          >
+            Contact
+          </h1>
+
+          <p class="text-center p-1 text-sm font-mono lg:text-xl">
+            <span class="console-cursor font-secondary"
+              >As someone who understands the web, if a visitor wants to create
+              a website or consult about a website, please contact the contact
+              below</span
+            >
+          </p>
+          <form
+            class="w-full flex flex-wrap flex-col items-center md:flex-row md:items-start mt-8 gap-4"
+          >
+            <div class="relative w-5/6 md:max-w-sm">
+              <label for="nama" class="block">Nama :</label>
+              <input
+                type="text"
+                class="w-full text-slate-800 outline-none border-[1px] border-slate-300 bg-white rounded-sm lg:w-4/5 peer focus:border-2 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-slate-600"
+                id="nama"
+                placeholder="Masukkan Nama"
+              />
+
+              <!-- <span
+                class="absolute transition-all duration-500 font-secondary top-1/2 left-4 lg:left-20 -translate-y-1/2 z-10 text-gray-600 peer-focus:top-0 peer-focus:text-slate-800 peer-focus:bg-white peer-focus:border-x-2 peer-focus:border-x-blue-600 peer-focus:px-3"
+              >
+                name
+              </span> -->
+            </div>
+            <div class="relative w-5/6">
+              <label for="pesan" class="block">Pesan :</label>
+              <textarea
+                class="w-full text-slate-800 outline-none border-[1px] border-slate-300 bg-white rounded-sm lg:w-4/5 peer relative focus:border-2 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-slate-600 resize-none"
+                id="pesan"
+                placeholder="Masukkan Pesan"
+                required
+              ></textarea>
+
+              <!-- <span
+                class="absolute transition-all duration-500 font-secondary top-2 left-4 lg:left-20 z-10 text-gray-600 peer-focus:-top-3 peer-focus:text-slate-800 peer-focus:bg-white peer-focus:border-x-2 peer-focus:border-x-blue-600 peer-focus:px-3"
+              >
+                message
+              </span> -->
+            </div>
+            <p
+              class="w-full visible text-center text-sm my-1 font-secondary text-red-700 peer-valid:invisible md:text-left"
+            >
+              If you want to send to WhatsApp, the message must be filled in
+            </p>
+            <button
+              id="wa"
+              type="button"
+              class="text-white bg-gray-800 font-medium rounded-md text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              send to whatsapp
+            </button>
+          </form>
+          <div class="flex flex-wrap">
+            <div class="w-full">
+              <div class="w-full flex mt-4 justify-center gap-3">
+                <a href="https://www.instagram.com/_haajirr/">
+                  <img src="icon/ig.svg" alt="" />
+                </a>
+                <a href="https://www.facebook.com/mu.hajir.1088?locale=id_ID">
+                  <img src="icon/fb.svg" alt="" />
+                </a>
+                <a href="https://github.com/hajir1">
+                  <img src="icon/github.svg" alt="" />
+                </a>
+                <a href="https://web.telegram.org/a/">
+                  <img src="icon/tele.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact end -->
+    </div>
+
+    <!-- footer start -->
+    <section class="w-full mt-10" id="footer">
+      <div class="w-full bg-black h-20 grid place-content-center">
+        <h1 id="footer_timer" class="font-semibold text-white text-base"></h1>
+      </div>
+    </section>
+    <!-- footer end -->
+  </body>
+  <script src="main.js" type="module"></script>
+</html>
